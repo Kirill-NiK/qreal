@@ -23,7 +23,6 @@
 #include <qrkernel/exception/exception.h>
 #include <qrutils/inFile.h>
 #include <editor/editorView.h>
-#include <models/commands/createElementCommand.h>
 
 #include "qrgui/mainWindow/mainWindow.h"
 #include "qrgui/mainWindow/palette/draggableElement.h"
