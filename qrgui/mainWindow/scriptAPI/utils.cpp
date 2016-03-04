@@ -19,6 +19,10 @@
 #include <QtGui/QWidgetList>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QComboBox>
+#include <QLineEdit>
+#include <QPushButton>
+#include <QAbstractButton>
+#include <QCheckBox>
 
 #include <qrkernel/exception/exception.h>
 #include <qrutils/inFile.h>
