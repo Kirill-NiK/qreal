@@ -59,8 +59,8 @@ void Utils::activateMenu(QMenu *menu) noexcept
 		return;
 	}
 
-	mVirtualKeyboard.clickEscape(); // hack for some unix windows systems.
-	mVirtualKeyboard.clickEscape(); // otherway we cant open sometimes
+//	mVirtualKeyboard.clickEscape(); // hack for some unix windows systems.
+//	mVirtualKeyboard.clickEscape(); // otherway we cant open sometimes
 
 	mVirtualKeyboard.clickKey(QLatin1Char(menu->title().at(1).toLatin1()), Qt::AltModifier);
 
