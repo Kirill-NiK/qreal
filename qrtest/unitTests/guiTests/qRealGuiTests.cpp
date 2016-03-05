@@ -370,9 +370,16 @@ void QRealGuiTests::exterminate(const int returnCode)
 //	run("dockWidgetsExistence.js");
 //}
 
+
+
 TEST_F(QRealGuiTests, editActionsExistence)
 {
 	run("editActionsExistence.js");
+}
+
+TEST_F(QRealGuiTests, createRootElementOnSceneAndQuit)
+{
+	run("createRootElementOnSceneAndQuit.js");
 }
 
 TEST_F(QRealGuiTests, fileActionsExistence)
@@ -390,147 +397,143 @@ TEST_F(QRealGuiTests, helpActionsExistence)
 	run("helpActionsExistence.js");
 }
 
-TEST_F(QRealGuiTests, mouseGesturesElementsExistence)
-{
-	run("mouseGesturesElementsExistence.js");
-}
-
-TEST_F(QRealGuiTests, preferenceDialogElementsExistence)
-{
-	run("preferenceDialogElementsExistence.js");
-}
-
-TEST_F(QRealGuiTests, settingsActionsExistence)
-{
-	run("settingsActionsExistence.js");
-}
-
-TEST_F(QRealGuiTests, toolbarsElementsExistence)
-{
-	run("toolbarsElementsExistence.js");
-}
-
-TEST_F(QRealGuiTests, toolsActionsExistence)
-{
-	run("toolsActionsExistence.js");
-}
-
-//TEST_F(QRealGuiTests, viewActionsExistence)
+//TEST_F(QRealGuiTests, mouseGesturesElementsExistence)
 //{
-//	run("viewActionsExistence.js");
+//	run("mouseGesturesElementsExistence.js");
 //}
 
-TEST_F(QRealGuiTests, dockWidgetsFunctioning)
-{
-	run("dockWidgetsFunctioning.js");
-}
-
-TEST_F(QRealGuiTests, editActionsFunctioning)
-{
-	run("editActionsFunctioning.js");
-}
-
-TEST_F(QRealGuiTests, fileActionsFunctioning)
-{
-	run("fileActionsFunctioning.js");
-}
-
-TEST_F(QRealGuiTests, findDialogElementsFunctioning)
-{
-	run("findDialogElementsFunctioning.js");
-}
-
-TEST_F(QRealGuiTests, helpActionsFunctioning)
-{
-	run("helpActionsFunctioning.js");
-}
-
-TEST_F(QRealGuiTests, preferenceDialogElementsFunctioning)
-{
-	run("preferenceDialogElementsFunctioning.js");
-}
-
-TEST_F(QRealGuiTests, toolbarsElementsFunctioning)
-{
-	run("toolbarsElementsFunctioning.js");
-}
-
-TEST_F(QRealGuiTests, toolsActionsFunctioning)
-{
-	run("toolsActionsFunctioning.js");
-}
-
-TEST_F(QRealGuiTests, viewActionsFunctioning)
-{
-	run("viewActionsFunctioning.js");
-}
-
-TEST_F(QRealGuiTests, autoSaveWork)
-{
-	run("autoSaveWork.js");
-}
-
-TEST_F(QRealGuiTests, createDiagramInCurrentModel)
-{
-	run("createDiagramInCurrentModel.js");
-}
-
-TEST_F(QRealGuiTests, createRootElementOnSceneAndQuit)
-{
-	run("createRootElementOnSceneAndQuit.js");
-}
-
-//TEST_F(QRealGuiTests, fullscreenModeScript)
+//TEST_F(QRealGuiTests, preferenceDialogElementsExistence)
 //{
-//	run("fullscreenModeScript.js");
+//	run("preferenceDialogElementsExistence.js");
 //}
 
-TEST_F(QRealGuiTests, linkNodeCooperationScript)
-{
-	run("linkNodeCooperationScript.js");
-}
-
-TEST_F(QRealGuiTests, logicalGraphicalModelsAndSceneInteraction)
-{
-	run("logicalGraphicalModelsAndSceneInteraction.js");
-}
-
-TEST_F(QRealGuiTests, miniMapWorkScript)
-{
-	run("miniMapWorkScript.js");
-}
-
-TEST_F(QRealGuiTests, paletteAndEditorPropertiesConcordance)
-{
-	run("paletteAndEditorPropertiesConcordance.js");
-}
-
-TEST_F(QRealGuiTests, paletteSearchScript)
-{
-	run("paletteSearchScript.js");
-}
-
-TEST_F(QRealGuiTests, propertyEditorScript)
-{
-	run("propertyEditorScript.js");
-}
-
-TEST_F(QRealGuiTests, rightclickAllScreenScript)
-{
-	run("rightclickAllScreenScript.js");
-}
-
-TEST_F(QRealGuiTests, saveOpenScript)
-{
-	run("saveOpenScript.js");
-}
-
-TEST_F(QRealGuiTests, verySimpleShapeEditorTest)
-{
-	run("verySimpleShapeEditorTest.js");
-}
-
-//TEST_F(QRealGuiTests, creatingNewDiagrams)
+//TEST_F(QRealGuiTests, settingsActionsExistence)
 //{
-//	run("creatingNewDiagrams.js");
+//	run("settingsActionsExistence.js");
 //}
+
+//TEST_F(QRealGuiTests, toolbarsElementsExistence)
+//{
+//	run("toolbarsElementsExistence.js");
+//}
+
+//TEST_F(QRealGuiTests, toolsActionsExistence)
+//{
+//	run("toolsActionsExistence.js");
+//}
+
+////TEST_F(QRealGuiTests, viewActionsExistence)
+////{
+////	run("viewActionsExistence.js");
+////}
+
+//TEST_F(QRealGuiTests, dockWidgetsFunctioning)
+//{
+//	run("dockWidgetsFunctioning.js");
+//}
+
+//TEST_F(QRealGuiTests, editActionsFunctioning)
+//{
+//	run("editActionsFunctioning.js");
+//}
+
+//TEST_F(QRealGuiTests, fileActionsFunctioning)
+//{
+//	run("fileActionsFunctioning.js");
+//}
+
+//TEST_F(QRealGuiTests, findDialogElementsFunctioning)
+//{
+//	run("findDialogElementsFunctioning.js");
+//}
+
+//TEST_F(QRealGuiTests, helpActionsFunctioning)
+//{
+//	run("helpActionsFunctioning.js");
+//}
+
+//TEST_F(QRealGuiTests, preferenceDialogElementsFunctioning)
+//{
+//	run("preferenceDialogElementsFunctioning.js");
+//}
+
+//TEST_F(QRealGuiTests, toolbarsElementsFunctioning)
+//{
+//	run("toolbarsElementsFunctioning.js");
+//}
+
+//TEST_F(QRealGuiTests, toolsActionsFunctioning)
+//{
+//	run("toolsActionsFunctioning.js");
+//}
+
+//TEST_F(QRealGuiTests, viewActionsFunctioning)
+//{
+//	run("viewActionsFunctioning.js");
+//}
+
+//TEST_F(QRealGuiTests, autoSaveWork)
+//{
+//	run("autoSaveWork.js");
+//}
+
+//TEST_F(QRealGuiTests, createDiagramInCurrentModel)
+//{
+//	run("createDiagramInCurrentModel.js");
+//}
+
+
+////TEST_F(QRealGuiTests, fullscreenModeScript)
+////{
+////	run("fullscreenModeScript.js");
+////}
+
+//TEST_F(QRealGuiTests, linkNodeCooperationScript)
+//{
+//	run("linkNodeCooperationScript.js");
+//}
+
+//TEST_F(QRealGuiTests, logicalGraphicalModelsAndSceneInteraction)
+//{
+//	run("logicalGraphicalModelsAndSceneInteraction.js");
+//}
+
+//TEST_F(QRealGuiTests, miniMapWorkScript)
+//{
+//	run("miniMapWorkScript.js");
+//}
+
+//TEST_F(QRealGuiTests, paletteAndEditorPropertiesConcordance)
+//{
+//	run("paletteAndEditorPropertiesConcordance.js");
+//}
+
+//TEST_F(QRealGuiTests, paletteSearchScript)
+//{
+//	run("paletteSearchScript.js");
+//}
+
+//TEST_F(QRealGuiTests, propertyEditorScript)
+//{
+//	run("propertyEditorScript.js");
+//}
+
+//TEST_F(QRealGuiTests, rightclickAllScreenScript)
+//{
+//	run("rightclickAllScreenScript.js");
+//}
+
+//TEST_F(QRealGuiTests, saveOpenScript)
+//{
+//	run("saveOpenScript.js");
+//}
+
+//TEST_F(QRealGuiTests, verySimpleShapeEditorTest)
+//{
+//	run("verySimpleShapeEditorTest.js");
+//}
+
+////TEST_F(QRealGuiTests, creatingNewDiagrams)
+////{
+////	run("creatingNewDiagrams.js");
+////}

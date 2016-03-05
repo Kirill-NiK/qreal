@@ -74,7 +74,7 @@ function quitWithoutSave() {
     var menuFile = ui.findMenu("menu_File");
     assert(menuFile != null);
     utils.activateMenu(menuFile);
-    api.wait(100);
+    api.wait(200);
     var actionQuit = ui.findActionInMenu(menuFile, "actionQuit");
     checkAction(actionQuit, true, false, false);
     assert(!ui.isSubMenuInMenu(menuFile, actionQuit));
