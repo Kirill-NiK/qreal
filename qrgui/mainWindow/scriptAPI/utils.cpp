@@ -63,7 +63,9 @@ void Utils::activateMenu(QMenu *menu) noexcept
 //	mVirtualKeyboard.clickEscape(); // otherway we cant open sometimes
 
 //	mVirtualKeyboard.clickKey(QLatin1Char(menu->title().at(1).toLatin1()), Qt::AltModifier);
-	QTest::keyClick(&mMainWindow, QLatin1Char(menu->title().at(1).toLatin1()), Qt::AltModifier);
+	// we can search a symbol after & but 1 is eazer
+	QTest::keyClick(&mMainWindow, Qt::Key_Escape, Qt::NoModifier);
+	QTest::keyClick(&mMainWindow, menu->title().at(1).toLatin1(), Qt::AltModifier);
 
 	if (!menu->activeAction()) {
 		QTest::qWait(25);
