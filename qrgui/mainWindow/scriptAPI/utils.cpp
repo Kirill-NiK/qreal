@@ -67,6 +67,11 @@ void Utils::activateMenuAction(QMenu *menu, QAction *actionForExec) noexcept
 		return;
 	}
 
+	if (menu->isHidden()) {
+		throwScriptException(tr("Utils::activateMenuAction: (menu is hidden). Given menu does not open."));
+		return;
+	}
+
 	for (const QAction *action : menu->actions()) {
 		if (action == actionForExec) {
 			QTest::keyClick(menu, Qt::Key_Enter);

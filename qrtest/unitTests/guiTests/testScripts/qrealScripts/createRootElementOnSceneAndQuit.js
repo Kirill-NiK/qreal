@@ -87,9 +87,13 @@ api.wait(200);
 
 print("state2");
 utils.activateMenu(menuFile);
+print("state2a");
 api.wait(100);
+print("state2b");
 clickButtonLater("Save", "Cancel", 1500);
+print("state2c");
 utils.activateMenuAction(menuFile, actionQuit);
+print("state2d");
 api.wait(200);
 
 print("state3");
