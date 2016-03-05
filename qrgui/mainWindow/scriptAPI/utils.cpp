@@ -21,6 +21,7 @@
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QCheckBox>
+#include <QMenuBar>
 
 #include <qrkernel/exception/exception.h>
 #include <qrutils/stringUtils.h>
@@ -64,13 +65,17 @@ void Utils::activateMenu(QMenu *menu) noexcept
 
 //	mVirtualKeyboard.clickKey(QLatin1Char(menu->title().at(1).toLatin1()), Qt::AltModifier);
 	// we can search a symbol after & but 1 is eazer
-	QTest::keyClick(&mMainWindow, Qt::Key_Escape, Qt::NoModifier);
-	QTest::keyClick(&mMainWindow, menu->title().at(1).toLatin1(), Qt::AltModifier);
-
+	//QTest::keyClick(&mMainWindow, Qt::Key_Escape, Qt::NoModifier);
+	//QTest::keyClick(&mMainWindow, menu->title().at(1).toLatin1(), Qt::AltModifier);
+	QMenuBar *menubar = dynamic_cast <QMenuBar *>(menu->parentWidget());
+	qDebug() << menubar->actionGeometry(menu->menuAction());
+	for (QAction * action : menubar->actions()) {
+		qDebug() << action;
+	}
+	QTest::mouseClick(menubar, Qt::LeftButton, Qt::NoModifier, menubar->actionGeometry(menu->menuAction()).topLeft() + QPoint(1, 1));
+	//mVirtualCursor.moveToXY(menubar->pos() +);
 	if (!menu->activeAction()) {
-		QTest::qWait(25);
 		QTest::keyClick(menu, Qt::Key_Down);
-		QTest::qWait(25);
 	}
 }
 
