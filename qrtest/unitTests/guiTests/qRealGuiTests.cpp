@@ -376,10 +376,43 @@ TEST_F(QRealGuiTests, editActionsExistence)
 {
 	run("editActionsExistence.js");
 }
-
-TEST_F(QRealGuiTests, createRootElementOnSceneAndQuit)
+TEST_F(QRealGuiTests, editActionsExistence1)
 {
-	run("createRootElementOnSceneAndQuit.js");
+	run("editActionsExistence.js");
+}
+
+TEST_F(QRealGuiTests, editActionsExistence2)
+{
+	run("editActionsExistence.js");
+}
+
+TEST_F(QRealGuiTests, editActionsExistence3)
+{
+	run("editActionsExistence.js");
+}
+
+TEST_F(QRealGuiTests, editActionsExistence4)
+{
+	run("editActionsExistence.js");
+}
+
+TEST_F(QRealGuiTests, editActionsExistence5)
+{
+	run("editActionsExistence.js");
+}
+TEST_F(QRealGuiTests, editActionsExistence6)
+{
+	run("editActionsExistence.js");
+}
+
+TEST_F(QRealGuiTests, editActionsExistence7)
+{
+	run("editActionsExistence.js");
+}
+
+TEST_F(QRealGuiTests, editActionsExistenc8e)
+{
+	run("editActionsExistence.js");
 }
 
 TEST_F(QRealGuiTests, fileActionsExistence)
@@ -393,6 +426,27 @@ TEST_F(QRealGuiTests, findDialogElementsExistence)
 }
 
 TEST_F(QRealGuiTests, helpActionsExistence)
+{
+	run("helpActionsExistence.js");
+}
+
+
+TEST_F(QRealGuiTests, createRootElementOnSceneAndQuit)
+{
+	run("createRootElementOnSceneAndQuit.js");
+}
+
+TEST_F(QRealGuiTests, fileActionsExistence1)
+{
+	run("fileActionsExistence.js");
+}
+
+TEST_F(QRealGuiTests, findDialogElementsExistenc1e)
+{
+	run("findDialogElementsExistence.js");
+}
+
+TEST_F(QRealGuiTests, helpActionsExisten1ce)
 {
 	run("helpActionsExistence.js");
 }
