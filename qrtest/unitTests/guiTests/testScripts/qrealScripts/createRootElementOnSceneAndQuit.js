@@ -79,15 +79,18 @@ var actionQuit = ui.findActionInMenu(menuFile, "actionQuit");
 checkAction(actionQuit, true, false, false);
 assert(!ui.isSubMenuInMenu(menuFile, actionQuit));
 
+print("state1");
 clickButtonLater("Save", "Save", 1500);
 clickButtonLater("Select file to save current metamodel to", "Cancel", 2250);
 utils.activateMenuAction(menuFile, actionQuit);
 api.wait(200);
 
+print("state2");
 utils.activateMenu(menuFile);
 api.wait(100);
 clickButtonLater("Save", "Cancel", 1500);
 utils.activateMenuAction(menuFile, actionQuit);
 api.wait(200);
 
+print("state3");
 quitWithoutSave();

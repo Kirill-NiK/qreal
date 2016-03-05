@@ -78,8 +78,10 @@ function quitWithoutSave() {
     var actionQuit = ui.findActionInMenu(menuFile, "actionQuit");
     checkAction(actionQuit, true, false, false);
     assert(!ui.isSubMenuInMenu(menuFile, actionQuit));
+    print("clickLaterDiscardcalled");
     clickButtonLater("Save", "Discard", 1500);
     utils.activateMenuAction(menuFile, actionQuit);
+    print("stateEnd");
 }
 
 // function quit() // just quit action knowing that save window dialog would not called
