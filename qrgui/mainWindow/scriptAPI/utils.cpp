@@ -42,10 +42,12 @@
 using namespace qReal;
 using namespace gui;
 
-Utils::Utils(ScriptAPI &scriptAPI, MainWindow &mainWindow, VirtualCursor &virtualCursor, HintAPI &hintAPI)
+Utils::Utils(ScriptAPI &scriptAPI, MainWindow &mainWindow, VirtualCursor &virtualCursor
+	   , VirtualKeyboard &virtualKeyboard, HintAPI &hintAPI)
 	: mScriptAPI(scriptAPI)
 	, mMainWindow(mainWindow)
 	, mVirtualCursor(virtualCursor)
+	, mVirtualKeyboard(virtualKeyboard)
 	, mHintAPI(hintAPI)
 {
 }
@@ -57,7 +59,16 @@ void Utils::activateMenu(QMenu *menu) noexcept
 		return;
 	}
 
-	QTest::keyClick(&mMainWindow, menu->title().at(1).toLatin1(), Qt::AltModifier);
+	mVirtualKeyboard.clickEscape(); // hack for some unix windows systems.
+	mVirtualKeyboard.clickEscape(); // otherway we cant open sometimes
+
+	mVirtualKeyboard.clickKey(QLatin1Char(menu->title().at(1).toLatin1()), Qt::AltModifier);
+
+	if (!menu->activeAction()) {
+		QTest::qWait(25);
+		QTest::keyClick(menu, Qt::Key_Down);
+		QTest::qWait(25);
+	}
 }
 
 void Utils::activateMenuAction(QMenu *menu, QAction *actionForExec) noexcept
@@ -69,6 +80,11 @@ void Utils::activateMenuAction(QMenu *menu, QAction *actionForExec) noexcept
 
 	if (menu->isHidden()) {
 		throwScriptException(tr("Utils::activateMenuAction: (menu is hidden). Given menu does not open."));
+		return;
+	}
+
+	if (!menu->activeAction()) {
+		throwScriptException(tr("Utils::activateMenuAction: (menu without selected actions)."));
 		return;
 	}
 

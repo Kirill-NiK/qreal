@@ -39,12 +39,14 @@ class Utils : public QObject
 	Q_OBJECT
 
 public:
-	Utils(ScriptAPI &scriptAPI, MainWindow &mainWindow, VirtualCursor &virtualCursor, HintAPI &hintAPI);
+	Utils(ScriptAPI &scriptAPI, MainWindow &mainWindow, VirtualCursor &virtualCursor
+			, VirtualKeyboard &virtualKeyboard, HintAPI &hintAPI);
 
 	// ---------- Actions: ----------//
 	// Don't forget about virtual cursor's moves.
 	/// Activates menu getting with pointer.
 	/// @note This method works with a keyboard (not a mouse).
+	/// before opening \a menu, two escapes are pressing.
 	/// @todo: realise visible mouse moves with hints or virtual cursor.
 	Q_INVOKABLE void activateMenu(QMenu *menu) noexcept;
 
@@ -117,6 +119,7 @@ private:
 	ScriptAPI &mScriptAPI;
 	MainWindow &mMainWindow;
 	VirtualCursor &mVirtualCursor;
+	VirtualKeyboard &mVirtualKeyboard;
 	HintAPI &mHintAPI;
 };
 
